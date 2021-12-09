@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hate Speech Detection</title>
+    <style>
+        form {
+            padding-top: 90px;
+        }
+        
+        h3 {
+            font-family: monospace;
+            font-size: xx-large;
+            color: white;
+            margin-top: 60px;
+            align:center;
+        }
+        
+        body {
+           
+            background-color: whitesmoke;
+            background-repeat: no-repeat;
+            background-size: 1400px;
+            background-attachment: fixed;
+            background-clip: inherit;
+            background-position: center;
+            background-image: url('../static/twitter.png')
+        }
+        
+        
+        #title a {
+            text-decoration: none;
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bolder;
+            color:white;
+        }
+        
+        #infoform form {
+            text-align: center;
+        }
+        
+         .container {
+            text-align:center;
+            margin-top:20%;
+        }
+
+        h2 {
+            margin:0;
+            padding:0;
+        }
+
+
+
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-default" id="title">
+        <h3><a href="{{ url_for('index') }}">Twitter Sentiments Analysis</a></h3>
+    </nav>
+</header>
+
+<body align="center">
+    
+    <div class="container" style="text-align:center;color:white; align:center;">
+        
+        <div style="height:150px;margin:0;">
+            <h2 style="background-color:blue;color:white;">The Review of :</h2>
+        <h4 style="color:black;">{{ msg }}</h4>
+        </div>
+        {% if prediction == 0 %}
+        <h2 style="background-color:green;color:white;"> It's Non Toxic Review </h2>
+        {% else %}
+        <h2 style="background-color:red;color:white;"> It's Toxic Review </h2>
+        {% endif %}
+    </div>
+    
+</body>
+
+</html>

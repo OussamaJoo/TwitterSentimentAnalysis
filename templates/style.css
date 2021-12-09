@@ -1,0 +1,51 @@
+form {
+    padding-top: 90px;
+}
+
+h3 {
+    font-family: monospace;
+    font-size: xx-large;
+    color: aliceblue;
+    margin-top: 60px;
+}
+
+body {
+   
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    background-attachment: fixed;
+    background-clip: inherit;
+    background-position: center;
+    background-image: url('../static/twitter.png')
+}
+
+.submit {
+    background-color: dodgerblue;
+    color: white;
+    width: 125px;
+    height: 45px;
+    font-size: 20px;
+    margin-left: 300px;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    background-color: white;
+    color: dodgerblue;
+    width: 125px;
+    border-radius: 10px;
+    height: 45px;
+}
+
+textarea:focus,
+input:focus {
+    color: dodgerblue;
+    font-size: 13px;
+}
+
+.text {
+    color: teal;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
